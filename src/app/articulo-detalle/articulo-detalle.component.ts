@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Articulo } from '../models/Articulo';
 
 @Component({
   selector: 'app-articulo-detalle',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./articulo-detalle.component.scss']
 })
 export class ArticuloDetalleComponent implements OnInit {
-
-  constructor() { }
+  articulo:Articulo;
+  constructor(private ruta:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.articulo=JSON.parse(this.ruta.snapshot.params.articulo);
   }
 
 }

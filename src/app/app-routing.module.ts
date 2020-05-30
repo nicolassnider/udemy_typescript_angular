@@ -24,7 +24,7 @@ const routes: Routes = [
     ]
   },
   { path:'articulo', component: ArticuloComponent},
-  { path:'articuloDetalle/:nombre', component: ArticuloDetalleComponent}
+  { path:'articuloDetalle', component: ArticuloDetalleComponent}
 ];
 
 @NgModule({
