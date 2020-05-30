@@ -3,9 +3,11 @@ import { Component, OnInit } from '@angular/core';
 class Alumno {
   nombre: String;
   apellido: String;
+  excelencia: Boolean;
   constructor() {
     this.nombre = this.nombre,
-    this.apellido = this.apellido
+    this.apellido = this.apellido,
+    this.excelencia=this.excelencia
   }
 }
 
@@ -26,10 +28,13 @@ export class EjemploComponent implements OnInit {
   agregar() {
     this.listadoAlumnos.push({
       nombre: this.alumno.nombre,
-      apellido: this.alumno.apellido
+      apellido: this.alumno.apellido,
+      excelencia:this.alumno.excelencia
     })
     this.alumno.nombre = '';
     this.alumno.apellido = '';
+    this.alumno.excelencia=false;
+
     console.log(this.listadoAlumnos)
   }
 
